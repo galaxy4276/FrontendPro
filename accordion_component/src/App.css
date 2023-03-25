@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400&display=swap');
+
+:root {
+  --bg-color: #FEFDFB;
+  --frame-bg-color: #FFFFFF;
+  --font-color: #0E1C4E;
+  --orange-main: #FB923C;
+  --orange-sub: #FFEDD5;
+  --violet-main: #818CF8;
+  --violet-sub: #E0E7FF;
+  --purple-main: #A78BFA;
+  --purple-sub: #EDE9FE;
+  --pink-main: #F472B6;
+  --pink-sub: #FCE7F3;
+  --green-main: #4ADE80;
+  --green-sub: #F0FDF4;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+html, body {
+  background-color: var(--bg-color);
+}
+
+#root, .App {
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.mainFrame {
+  min-width: 370px;
+  max-width: 700px;
+  padding: 78px 52px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  background-color: var(--frame-bg-color);
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.base-font {
+  color: var(--font-color);
+}
+
+.title {
+  width: 100%;
+}
+
+.title h1 {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.title h3 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+button[type="button"] {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  height: 19px;
+  transition: transform 0.25s ease;
+}
+
+.orange {
+  background-color: var(--orange-sub);
+  border-color: var(--orange-main);
+  border-left: 5px solid var(--orange-main);
+}
+
+.violet {
+  background-color: var(--violet-sub);
+  border-color: var(--violet-main);
+  border-left: 5px solid var(--violet-main);
+}
+
+.purple {
+  background-color: var(--purple-sub);
+  border-color: var(--purple-main);
+  border-left: 5px solid var(--purple-main);
+}
+
+.pink {
+  background-color: var(--pink-sub);
+  border-color: var(--pink-main);
+  border-left: 5px solid var(--pink-main);
+}
+
+.green {
+  background-color: var(--green-sub);
+  border-color: var(--green-main);
+  border-left: 5px solid var(--green-main);
+}
+
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  transition: height .5s ease;
+}
+
+.accordionLayout {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.accordionTitleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.button-rotate {
+  transform: rotate(45deg);
+}
+
+.accordionContentSection {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .2s ease-out;
+}
